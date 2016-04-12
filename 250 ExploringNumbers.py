@@ -15,7 +15,7 @@ class ExploringNumbers(object):
             return True
         elif a % 2 == 0:
             return False
-        return all(a % i for i in self._mrange(3, (math.sqrt(a))+1, 2))
+        return all(a % i for i in self._mrange(3, (math.sqrt(a))+2, 2))
 
     def _next_num(self, n):
         result = map(lambda s: int(s)**2, str(n))
