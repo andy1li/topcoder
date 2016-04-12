@@ -11,38 +11,41 @@ class Hex(object):
 
     def picture(self, n, marks):
         result = []
-        self.marks = self._marks_to_dict(marks)
+        marks = self._marks_to_dict(marks)
         
         # change '' to ' ' if printing is needed
-        self.result = [['' for i in range(2*n+1)] for j in range(3*n)]
-        # print n, self.marks
-        # pprint.pprint(self.result)
+        result = [[' ' for i in range(2*n+1)] for j in range(3*n)]
+        # print n, marks
+        # pprint.pprint(result)
         
         for i in range(0, 2*n, 2):
             for j in range(0, 2*n, 2):
                 y = i + j/2
                 x = j
                 
-                self.result[y][x+1] = '_'
-                self.result[y+1][x] = '/'
-                self.result[y+1][x+2] = '\\'
-                self.result[y+2][x] = '\\'
-                self.result[y+2][x+1] = '_'
-                self.result[y+2][x+2] = '/'
+                result[y][x+1] = '_'
+                result[y+1][x] = '/'
+                result[y+1][x+2] = '\\'
+                result[y+2][x] = '\\'
+                result[y+2][x+1] = '_'
+                result[y+2][x+2] = '/'
 
                 # print str(j/2), str(i/2)
-                if self.marks.get(str(j/2)+str(i/2)):
-                    self.result[y+1][x+1] = self.marks[str(j/2)+str(i/2)]
+                if marks.get(str(j/2)+str(i/2)):
+                    result[y+1][x+1] = marks[str(j/2)+str(i/2)]
                 else:
-                    self.result[y+1][x+1] = ' '
-
-        # pprint.pprint(self.result)     
-        return map(lambda x: ''.join(x), self.result)
+                    result[y+1][x+1] = ' '
+                    
+        result = map(lambda x: ''.join(x), result)
+        result = map(lambda x: x.rstrip(), result)
+        # pprint.pprint(result)     
+        return tuple(result)
       
         
 
 foo = Hex()
-for line in foo.picture(4, ["00h","21h","01v","03v","02v"]):
+print foo.picture(4, ("00h","21h","01v","03v","02v"))
+for line in foo.picture(4, ("00h","21h","01v","03v","02v")):
     print line
 
 

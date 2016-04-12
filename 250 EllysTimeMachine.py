@@ -1,13 +1,13 @@
 # https://arena.topcoder.com/#/u/practiceCode/16705/48887/13934/1/328359
 
 class EllysTimeMachine (object):
-    def hToM(self, h):
+    def _hToM(self, h):
         m = int(h)*5
         if m == 60:
             m = 0
         return '{:02d}'.format(m)
         
-    def mToH(self, m):
+    def _mToH(self, m):
         h = int(m)/5
         if h == 0:
             h = 12
@@ -17,7 +17,7 @@ class EllysTimeMachine (object):
         (h, m) = time.split(':')
         #print h, m, self.mToH(m), self.hToM(h)
         
-        return self.mToH(m)+':'+self.hToM(h)
+        return self._mToH(m)+':'+self._hToM(h)
       
 
 foo = EllysTimeMachine()
