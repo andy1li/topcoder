@@ -3,6 +3,9 @@
 #### [175 Hex](https://arena.topcoder.com/#/u/practiceCode/1435/2824/3054/1/1435)
 >`【Easy】Build a matrix and swap out the corresponding cells according to the Hex design`
 
+#### [200 Genetics](https://arena.topcoder.com/#/u/practiceCode/1413/2747/2973/1/1413)
+>`【Easy】***`
+
 #### [250 EllysTimeMachine](https://arena.topcoder.com/#/u/practiceCode/16705/48887/13934/1/328359)
 >`【Easy】Simple arithmetics of multiplication or division of 5`
 
