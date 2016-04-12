@@ -1,4 +1,7 @@
 # Gists of Topcoder practice problems
 
+#### [175 Hex](https://arena.topcoder.com/#/u/practiceCode/1435/2824/3054/1/1435)
+>`【Easy】Build a matrix and swap out the corresponding cells according to the Hex design`
+
 #### [250 Substitute](https://arena.topcoder.com/#/u/practiceCode/1282/1262/1333/2/1282)
->`【Trivial】Use map() to substitute the values in the code`
+>`【Easy】Use map() to substitute the values in the code string`
